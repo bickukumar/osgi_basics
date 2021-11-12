@@ -1,0 +1,18 @@
+<h2>Hello World</h2>
+<div class="container">
+    <sly data-sly-use.model="com.mysite.core.models.LinkModelPojo">
+
+    <ul data-sly-list.myItems= "${model.listChildren}">
+        <li>${myItems.links}</li>
+
+        <sly data-sly-test="${properties.option == sametab}">
+            <li><a href="${myItems.link}" target="_self">Link here</a></li>
+        </sly>
+
+        <sly data-sly-test="${properties.option == newtab}">
+            <li><a href="${myItems.link}" target="_blank">Link here</a></li>
+        </sly>
+    </ul>
+
+</sly>
+</div>
